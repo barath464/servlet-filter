@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>ServletSession</display-name>
+	<servlet>
+		<servlet-name>FilterProgServlet</servlet-name>
+		<servlet-class>com.servlet.FilterProgServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>FilterProgServlet</servlet-name>
+		<url-pattern>/FilterProgServlet</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>FilterProg</filter-name>
+		<filter-class>com.servlet.FilterProg</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>FilterProg</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+</web-app>
